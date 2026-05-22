@@ -55,29 +55,12 @@ function nowForInput() {
 
 function BodyFigure() {
   return (
-    <svg className="bodyFigure" viewBox="0 0 160 350" fill="none">
-      <defs>
-        <linearGradient id="bodyGradient" x1="20" x2="138" y1="0" y2="350">
-          <stop stopColor="#5a6069" />
-          <stop offset="0.48" stopColor="#252930" />
-          <stop offset="1" stopColor="#111317" />
-        </linearGradient>
-        <radialGradient id="softLight" cx="50%" cy="23%" r="72%">
-          <stop stopColor="rgba(255,255,255,.26)" />
-          <stop offset="0.55" stopColor="rgba(255,255,255,.04)" />
-          <stop offset="1" stopColor="rgba(0,0,0,.36)" />
-        </radialGradient>
-      </defs>
-
-      <path d="M56 78c-18 8-29 26-34 59l-9 71c-2 16 15 18 19 4l11-62 9 91-9 84c-2 18 21 22 26 4l13-83 13 83c5 18 28 14 26-4l-9-84 9-91 11 62c4 14 21 12 19-4l-9-71c-5-33-16-51-34-59H56Z" fill="url(#bodyGradient)" />
-      <path d="M56 78c-18 8-29 26-34 59l-9 71c-2 16 15 18 19 4l11-62 9 91-9 84c-2 18 21 22 26 4l13-83 13 83c5 18 28 14 26-4l-9-84 9-91 11 62c4 14 21 12 19-4l-9-71c-5-33-16-51-34-59H56Z" fill="url(#softLight)" />
-      <path d="M64 61h32v36H64z" fill="url(#bodyGradient)" opacity=".95" />
-      <path d="M54 29c0-19 13-29 28-29s28 10 28 29c0 25-11 45-28 45S54 54 54 29Z" fill="url(#bodyGradient)" className="faceShadow" />
-      <path d="M51 18c15-19 43-20 59 1-6-4-19-9-36-6-10 2-17 5-23 5Z" fill="#17191d" />
-      <path d="M66 31c7-2 13-2 19 1M98 31c-7-2-13-2-19 1" stroke="#14161a" strokeWidth="2" opacity=".5" />
-      <path d="M81 33c-3 10-3 18 0 23" stroke="#14161a" strokeWidth="1.4" opacity=".45" />
-      <path d="M72 58c8 5 17 5 25 0" stroke="#14161a" strokeWidth="2" opacity=".45" />
-    </svg>
+    <img
+      className="bodyFigure"
+      src="/merka/body-model.webp"
+      alt="Силуэт тела"
+      draggable="false"
+    />
   )
 }
 

@@ -112,26 +112,28 @@ h2 {
 
 .figureGrid {
   display: grid;
-  grid-template-columns: 1fr 156px 1fr;
-  gap: 8px;
+  grid-template-columns: 1fr 168px 1fr;
+  gap: 10px;
   align-items: center;
-  min-height: 380px;
+  min-height: 408px;
 }
 
 .figureBox {
-  height: 350px;
+  height: 392px;
   position: relative;
-  filter: drop-shadow(0 26px 26px rgba(0,0,0,.35));
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 26px 28px rgba(0,0,0,.42));
 }
 
 .bodyFigure {
-  width: 156px;
-  height: 350px;
+  width: 168px;
+  height: 390px;
+  object-fit: contain;
+  object-position: center bottom;
   display: block;
-}
-
-.faceShadow {
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,.35));
+  user-select: none;
+  pointer-events: none;
 }
 
 .measureColumn {
@@ -553,11 +555,13 @@ h2 {
   }
 
   .figureGrid {
-    grid-template-columns: 1fr 132px 1fr;
+    grid-template-columns: 1fr 148px 1fr;
+    gap: 6px;
   }
 
   .bodyFigure {
-    width: 132px;
+    width: 148px;
+    height: 370px;
   }
 
   .measureValue {
