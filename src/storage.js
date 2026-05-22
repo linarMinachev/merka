@@ -1,10 +1,10 @@
 const PREFIX = 'merka.react.v1.'
 
 const seedMeasurements = [
-  { id: 1, date: '2026-05-01T09:00', weight: 89, height: 170, chest: 102, waist: 91, belly: 98, hips: 104, leg: 58, note: '' },
-  { id: 2, date: '2026-05-08T09:00', weight: 88, height: 170, chest: 102, waist: 90, belly: 96, hips: 103, leg: 58, note: '' },
-  { id: 3, date: '2026-05-15T09:00', weight: 86, height: 170, chest: 103, waist: 88, belly: 94, hips: 102, leg: 58, note: '' },
-  { id: 4, date: '2026-05-22T09:00', weight: 85, height: 170, chest: 104, waist: 86, belly: 92, hips: 101, leg: 58, note: '' },
+  { id: 1, date: '2026-05-01T09:00', weight: 89, height: 170, shoulders: 118, chest: 102, waist: 91, belly: 98, hips: 104, leg: 58, note: '' },
+  { id: 2, date: '2026-05-08T09:00', weight: 88, height: 170, shoulders: 118, chest: 102, waist: 90, belly: 96, hips: 103, leg: 58, note: '' },
+  { id: 3, date: '2026-05-15T09:00', weight: 86, height: 170, shoulders: 117, chest: 103, waist: 88, belly: 94, hips: 102, leg: 58, note: '' },
+  { id: 4, date: '2026-05-22T09:00', weight: 85, height: 170, shoulders: 117, chest: 104, waist: 86, belly: 92, hips: 101, leg: 58, note: '' },
 ]
 
 const seedClothes = {

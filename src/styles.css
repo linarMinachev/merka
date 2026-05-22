@@ -112,23 +112,23 @@ h2 {
 
 .figureGrid {
   display: grid;
-  grid-template-columns: 1fr 168px 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr 176px 1fr;
+  gap: 12px;
   align-items: center;
-  min-height: 408px;
+  min-height: 455px;
 }
 
 .figureBox {
-  height: 392px;
+  height: 438px;
   position: relative;
   display: grid;
-  place-items: center;
+  place-items: start center;
   filter: drop-shadow(0 26px 28px rgba(0,0,0,.42));
 }
 
 .bodyFigure {
-  width: 168px;
-  height: 390px;
+  width: 176px;
+  height: 382px;
   object-fit: contain;
   object-position: center bottom;
   display: block;
@@ -139,12 +139,12 @@ h2 {
 .measureColumn {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 24px;
 }
 
 .measureColumn.right {
   align-self: start;
-  padding-top: 42px;
+  padding-top: 34px;
 }
 
 .measureItem {
@@ -167,6 +167,51 @@ h2 {
   margin-top: 4px;
   font-size: 13px;
   font-weight: 800;
+}
+
+.weightPill {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  min-width: 146px;
+  border: 1px solid var(--line);
+  background: rgba(10, 12, 15, .72);
+  border-radius: 20px;
+  padding: 12px 14px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.weightPill span,
+.weightPill em {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.weightPill b {
+  display: block;
+  margin-top: 3px;
+  font-size: 25px;
+  line-height: 1.05;
+  letter-spacing: -.04em;
+}
+
+.weightPill em {
+  margin-top: 4px;
+  font-weight: 850;
+}
+
+.heightNote {
+  margin-top: -8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.heightNote b {
+  color: var(--soft);
 }
 
 .good {
@@ -555,13 +600,23 @@ h2 {
   }
 
   .figureGrid {
-    grid-template-columns: 1fr 148px 1fr;
+    grid-template-columns: 1fr 150px 1fr;
     gap: 6px;
+    min-height: 430px;
+  }
+
+  .figureBox {
+    height: 418px;
   }
 
   .bodyFigure {
-    width: 148px;
-    height: 370px;
+    width: 150px;
+    height: 354px;
+  }
+
+  .weightPill {
+    min-width: 130px;
+    padding: 10px 12px;
   }
 
   .measureValue {
