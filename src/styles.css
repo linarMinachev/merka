@@ -1,0 +1,574 @@
+:root {
+  --bg: #050607;
+  --panel: #101216;
+  --panel-2: #15181d;
+  --line: rgba(255,255,255,.075);
+  --text: #f4f5f6;
+  --muted: #8b9099;
+  --soft: #b8bdc6;
+  --green: #42d96b;
+  --red: #ff6464;
+  --radius: 26px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(circle at 50% -10%, rgba(70,77,90,.22), transparent 34%),
+    linear-gradient(180deg, #08090b 0%, #050607 56%, #020303 100%);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.appShell {
+  min-height: 100svh;
+}
+
+.app {
+  width: min(430px, 100%);
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: calc(env(safe-area-inset-top) + 18px) 18px calc(env(safe-area-inset-bottom) + 96px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 10px 0 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.05;
+  letter-spacing: -.04em;
+  font-weight: 850;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  letter-spacing: -.03em;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.iconButton {
+  min-width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  color: var(--soft);
+  display: grid;
+  place-items: center;
+  padding: 0 12px;
+}
+
+.heroCard,
+.infoCard,
+.actionCard,
+.listCard,
+.formCard,
+.trendCard,
+.brandCard {
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
+  box-shadow: 0 20px 50px rgba(0,0,0,.24);
+  border-radius: var(--radius);
+}
+
+.heroCard {
+  padding: 18px 16px 16px;
+}
+
+.figureGrid {
+  display: grid;
+  grid-template-columns: 1fr 156px 1fr;
+  gap: 8px;
+  align-items: center;
+  min-height: 380px;
+}
+
+.figureBox {
+  height: 350px;
+  position: relative;
+  filter: drop-shadow(0 26px 26px rgba(0,0,0,.35));
+}
+
+.bodyFigure {
+  width: 156px;
+  height: 350px;
+  display: block;
+}
+
+.faceShadow {
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.35));
+}
+
+.measureColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.measureColumn.right {
+  align-self: start;
+  padding-top: 42px;
+}
+
+.measureItem {
+  min-height: 54px;
+}
+
+.measureName {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.measureValue {
+  font-size: 22px;
+  font-weight: 850;
+  letter-spacing: -.03em;
+}
+
+.measureDelta {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.good {
+  color: var(--green);
+}
+
+.bad {
+  color: var(--red);
+}
+
+.neutral {
+  color: var(--muted);
+}
+
+.quickActions,
+.twoCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.actionCard {
+  min-height: 92px;
+  padding: 15px;
+  color: var(--text);
+  text-align: left;
+}
+
+.actionCard span:last-child {
+  display: block;
+}
+
+.actionCard b,
+.infoCard > b {
+  display: block;
+  font-size: 17px;
+  letter-spacing: -.02em;
+}
+
+.actionCard em,
+.infoCard em {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  font-style: normal;
+}
+
+.actionIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.055);
+  color: var(--soft);
+  display: grid;
+  place-items: center;
+  margin-bottom: 11px;
+}
+
+.actionIcon.primary {
+  background: rgba(66,217,107,.13);
+  color: var(--green);
+}
+
+.infoCard {
+  min-height: 154px;
+  padding: 16px;
+  color: var(--text);
+  text-align: left;
+}
+
+.infoCard strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 24px;
+  letter-spacing: -.03em;
+}
+
+.sparkline,
+.emptyChart {
+  width: 100%;
+  height: 82px;
+  margin-top: 8px;
+}
+
+.emptyChart {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.sizeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sizeGrid span {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.sizeGrid strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--text);
+  font-size: 21px;
+}
+
+.bottomNav {
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom) + 12px);
+  transform: translateX(-50%);
+  width: min(400px, calc(100% - 28px));
+  height: 70px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(18,20,24,.88);
+  backdrop-filter: blur(18px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 6px;
+}
+
+.bottomNav button {
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  gap: 2px;
+}
+
+.bottomNav button.active {
+  background: rgba(66,217,107,.12);
+  color: var(--green);
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: rgba(255,255,255,.045);
+  padding: 4px;
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+
+.tabs button {
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--muted);
+  padding: 12px 4px;
+  font-size: 14px;
+}
+
+.tabs button.active {
+  background: rgba(255,255,255,.07);
+  color: var(--text);
+}
+
+.trendGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.trendCard {
+  padding: 14px;
+}
+
+.trendCard span,
+.trendCard em {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+}
+
+.trendCard b {
+  display: block;
+  margin: 12px 0 4px;
+  font-size: 21px;
+  letter-spacing: -.03em;
+}
+
+.listCard {
+  padding: 16px;
+}
+
+.record {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 10px;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+
+.record:first-of-type {
+  border-top: 0;
+}
+
+.recordDate b {
+  display: block;
+  color: var(--soft);
+}
+
+.recordDate span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.recordValues {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.recordValues em {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+}
+
+.recordValues b {
+  display: block;
+  font-size: 15px;
+}
+
+.recordValues small {
+  font-weight: 800;
+}
+
+.empty {
+  padding: 24px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.wideButton,
+.saveButton {
+  width: 100%;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--green);
+  color: #031006;
+  padding: 16px;
+  font-size: 17px;
+  font-weight: 850;
+}
+
+.wideButton {
+  background: rgba(66,217,107,.11);
+  color: var(--green);
+  text-align: left;
+}
+
+.formCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+}
+
+.field {
+  display: block;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field span {
+  display: block;
+  margin: 0 0 7px 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #0d0f12;
+  color: var(--text);
+  border-radius: 16px;
+  outline: none;
+  padding: 14px 13px;
+}
+
+.saveButton {
+  grid-column: 1 / -1;
+}
+
+.brandList {
+  display: grid;
+  gap: 12px;
+}
+
+.brandCard {
+  padding: 15px;
+  color: var(--text);
+  text-align: left;
+}
+
+.brandTop {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.brandLogo {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  border: 1px solid var(--line);
+  background: #090a0c;
+  display: grid;
+  place-items: center;
+  font-weight: 850;
+}
+
+.brandTop b {
+  display: block;
+  font-size: 19px;
+}
+
+.brandTop em {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-style: normal;
+  font-size: 13px;
+}
+
+.brandSizes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  margin-top: 14px;
+  padding-top: 12px;
+}
+
+.brandSizes span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.brandSizes b {
+  display: block;
+  color: var(--text);
+  font-size: 19px;
+  margin-top: 3px;
+}
+
+.brandCard p {
+  margin: 12px 0 0;
+  color: var(--green);
+  font-size: 13px;
+}
+
+.modalForm {
+  margin-top: 12px;
+}
+
+@media (max-width: 390px) {
+  .app {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .figureGrid {
+    grid-template-columns: 1fr 132px 1fr;
+  }
+
+  .bodyFigure {
+    width: 132px;
+  }
+
+  .measureValue {
+    font-size: 19px;
+  }
+
+  .record {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .recordValues {
+    grid-template-columns: 1fr 1fr;
+  }
+}

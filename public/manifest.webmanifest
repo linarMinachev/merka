@@ -1,0 +1,23 @@
+{
+  "name": "Мерка",
+  "short_name": "Мерка",
+  "description": "Личные замеры, размеры одежды и история изменений",
+  "start_url": "/merka/",
+  "scope": "/merka/",
+  "display": "standalone",
+  "background_color": "#050607",
+  "theme_color": "#050607",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/merka/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/merka/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
